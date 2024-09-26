@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>IP and Port Display</title>
+	<style>
+		body {
+			font-family: Arial, sans-serif;
+			text-align: center;
+		}
+	</style>
+</head>
+<body>
+	<h1>IP and Port Display</h1>
+	<p id="ip-port"></p>
+
+	<script>
+		// Get the IP address and port using JavaScript
+		fetch('https://api.ipify.org?format=json')
+			.then(response => response.json())
+			.then(data => {
+				const ipAddress = data.ip;
+				const port = location.port;
+				document.getElementById('ip-port').innerHTML = `IP Address: ${ipAddress}<br>Port: ${port}`;
+			});
+	</script>
+</body>
+</html>
