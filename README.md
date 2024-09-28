@@ -1,27 +1,18 @@
-Table of Contents
-=================
+# 🚀Key Features
 
-Step 1: Create a Security Group for the AWS Instance
+##### Creates a security group for the AWS instance with custom TCP rules, HTTP rule, and SSH rule
 
-Step 2: Launch the Instance
+##### Launches a new instance of CentOS or Amazon Linux
 
-Step 3: Connect to the Instance using SSH
+##### Installs Apache as the web server
 
-Step 4: Update the Instance
+##### Creates directories for each website
 
-Step 5: Install the HTTP Server
+##### Creates an index.html file and copies it to each website directory
 
-Step 6: Create Directories for Each Website
+##### Configures the Apache server to listen on multiple ports
 
-Step 7: Create an index.html File in the Home Directory
-
-Step 8: Copy the index.html File to Each Website Directory
-
-Step 9: Change Ownership of the Website Directories
-
-Step 10: Configure the HTTP Server
-
-Step 11: Configure the DNS Settings
+##### Configures DNS settings to point to the instance IP address
 
 # Prerequisites
 
