@@ -137,7 +137,7 @@ Listen 83
 
 
 ```bash 
-<VirtualHost *:82>
+<VirtualHost *:81>
     ServerName awscodecraft.cloud
     DocumentRoot /var/www/web1
 </VirtualHost>
