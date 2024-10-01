@@ -138,17 +138,14 @@ Listen 83
 
 ```bash 
 <VirtualHost *:81>
-    ServerName awscodecraft.cloud
     DocumentRoot /var/www/web1
 </VirtualHost>
 
 <VirtualHost *:82>
-    ServerName awscodecraft.cloud
     DocumentRoot /var/www/web2
 </VirtualHost>
 
 <VirtualHost *:83>
-    ServerName awscodecraft.cloud
     DocumentRoot /var/www/web3
 </VirtualHost>
 ```
