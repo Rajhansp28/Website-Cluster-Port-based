@@ -1,27 +1,93 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-	<title>IP and Port Display</title>
-	<style>
-		body {
-			font-family: Arial, sans-serif;
-			text-align: center;
-		}
-	</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IP Address and Port</title>
+    <style>
+        /* Global Styles */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+        }
+
+        /* Header Styles */
+        .header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        /* IP Address and Port Styles */
+        .ip-address {
+            font-size: 24px;
+            font-weight: bold;
+            color: #00698f;
+            animation: moveFromLeft 2s;
+        }
+
+        .port {
+            font-size: 24px;
+            font-weight: bold;
+            color: #00698f;
+            animation: moveFromTop 2s;
+        }
+
+        /* Animation Styles */
+        @keyframes moveFromLeft {
+            from {
+                transform: translateX(-100%);
+            }
+            to {
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes moveFromTop {
+            from {
+                transform: translateY(-100%);
+            }
+            to {
+                transform: translateY(0);
+            }
+        }
+
+        /* Responsive Styles */
+        @media only screen and (max-width: 768px) {
+            .ip-address {
+                font-size: 18px;
+            }
+
+            .port {
+                font-size: 18px;
+            }
+        }
+    </style>
 </head>
 <body>
-	<h1>IP and Port Display</h1>
-	<p id="ip-port"></p>
+    <div class="header">
+        <h1>Welcome to our website!</h1>
+    </div>
+    <div class="content">
+        <div class="ip-address" id="ip-address"></div>
+        <div class="port" id="port"></div>
+    </div>
 
-	<script>
-		// Get the IP address and port using JavaScript
-		fetch('https://api.ipify.org?format=json')
-			.then(response => response.json())
-			.then(data => {
-				const ipAddress = data.ip;
-				const port = location.port;
-				document.getElementById('ip-port').innerHTML = `IP Address: ${ipAddress}<br>Port: ${port}`;
-			});
-	</script>
+    <script>
+        // Get the IP address and port using JavaScript
+        const ipAddress = window.location.hostname;
+        const port = window.location.port;
+
+        // Display the IP address and port on the webpage
+        document.getElementById("ip-address").innerHTML = `IP Address: ${ipAddress}`;
+        document.getElementById("port").innerHTML = `Port: ${port}`;
+    </script>
 </body>
 </html>
